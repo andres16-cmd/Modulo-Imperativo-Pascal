@@ -120,21 +120,6 @@ type
 	inciso a) y un código de videojuego. Este módulo debe retornar 
 	la lista de las compras de ese videojuego.}
 	
-	Procedure Print_Lista(L: Lista);
-	begin
-		
-		writeln('Lista de Compras');
-		while (L <> nil) do
-		begin
-			write('---------------------------------------------');
-			write('|Codigo Cliente| ------------ |Mes de Compra|');
-			write('|',L^.dato.cod_cliente,'| -- |',L^.dato.mes,'|');
-			write('---------------------------------------------');
-			
-			L:= L^.sig;
-		end;
-	end;
-	
 	Procedure Buscar_Lista(a: arbol; codigo: integer; var L: Lista);
 	begin
 		
@@ -167,7 +152,6 @@ type
    {c) Implementar un módulo recursivo que reciba la lista generada
    en el inciso b) y un mes. El módulo debe retornar la cantidad 
    de clientes que compraron en el mes ingresado.}
-	
 	
 	Function Cantidad_Clientes(L:Lista; mes_buscar: integer): integer;
 	begin
